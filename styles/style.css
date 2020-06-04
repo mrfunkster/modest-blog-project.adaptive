@@ -138,14 +138,17 @@ h3 {
 .light {
     background-color: white;
     color: #292f36;
+    transition: var(--transition-time);
 }
 .light h3 {
     color: #292f36;
+    transition: var(--transition-time);
 }
 .light p {
     color: #8d8f92;
     line-height: 26px;
     font-size: 16px;
+    transition: var(--transition-time);
 }
 .light .section-tittle {
     color: #292f36;
@@ -156,12 +159,15 @@ h3 {
 .dark {
     background-color: #3a454d;
     color: white;
+    transition: var(--transition-time);
 }
 .dark h3 {
     color: white;
+    transition: var(--transition-time);
 }
 .dark p {
     color: #dcdfe1;
+    transition: var(--transition-time);
 }
 .dark .section-tittle {
     color: white;
@@ -251,21 +257,53 @@ h3 {
 .card {
     margin-top: 30px;
     width: 100%;
+    cursor: pointer;
 }
 
 .card-photo-section {
-    height: 420px;
+    height: 350px;
+    position: relative;
 }
+
+.overlay {
+    visibility: hidden;
+    opacity: 0;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: var(--transition-time);
+}
+
+.card:hover .overlay {
+    visibility: visible;
+    opacity: .5;
+    transition: var(--transition-time);
+}
+
 .card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .card-description {
     background-color: #e1e6ea;
     padding: 20px;
+    transition: var(--transition-time);
 } 
+
+.card:hover .card-description {
+    background-color: #3a454d;
+}
+.card:hover .card-description h3,
+.card:hover .card-description p {
+    color: #dcdfe1;
+    transition: var(--transition-time);
+}
 .card-description p {
     font-size: 14px;
 }
@@ -367,10 +405,10 @@ h3 {
         margin-top: 10px;
     }
     .card {
-        width: 382px;
+        width: 50%;
     }
     .card-photo-section {
-        height: 400px;
+        height: 300px;
     }
 }
 
@@ -402,7 +440,7 @@ h3 {
         width: 240px;
     }
     .card-photo-section {
-        height: 241px;
+        height: 250px;
     }
     .card-row {
         justify-content: space-between;
