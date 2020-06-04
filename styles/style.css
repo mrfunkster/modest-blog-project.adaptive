@@ -266,15 +266,15 @@ h3 {
 }
 
 .overlay {
-    visibility: hidden;
-    opacity: 0;
     background-color: white;
+    opacity: 0;
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     transition: var(--transition-time);
+    z-index: 10;
 }
 
 .card:hover .overlay {
@@ -315,6 +315,40 @@ h3 {
     flex-direction: column;
     align-items: center;
 }
+.card-social-links {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--transition-time);
+    z-index: 10;
+}
+.card:hover .card-social-links {
+    visibility: visible;
+    opacity: 1;
+}
+.card-social-link {
+    width: 50px;
+    height: 50px;
+    background-color: #3a454d;
+    margin-right: 1px;
+    transition: var(--transition-time);
+}
+.card-social-link:hover {
+    background-color: #4e5a62;
+    transition: var(--transition-time);
+}
+.card-social-link:last-child {
+    margin-right: 0;
+}
+.card-social-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 
 /* Mobile */
@@ -327,8 +361,8 @@ h3 {
         overflow-x: auto;
         overflow-y: hidden;
         white-space: nowrap;
-        padding-top: 5px;
-        padding-bottom: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     .menu a {
         font-size: 16px;
