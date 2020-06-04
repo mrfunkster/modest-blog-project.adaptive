@@ -248,6 +248,37 @@ h3 {
     background-color: #dde1e4;
 }
 
+.card {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.card-photo-section {
+    height: 420px;
+}
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-description {
+    background-color: #e1e6ea;
+    padding: 20px;
+} 
+.card-description p {
+    font-size: 14px;
+}
+.card-description h3 {
+    font-size: 16px;
+}
+
+.card-row {
+    flex-direction: column;
+    align-items: center;
+}
+
+
 /* Mobile */
 @media(max-width: 767px) {
     .nav-menu {
@@ -328,6 +359,19 @@ h3 {
         width: 60px;
         height: 60px;
     }
+    .card-row {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: initial;
+        margin-top: 10px;
+    }
+    .card {
+        width: 382px;
+    }
+    .card-photo-section {
+        height: 400px;
+    }
 }
 
 /* Laptop */
@@ -353,12 +397,23 @@ h3 {
     .points-section h3 {
         margin-bottom: 18px;
     }
+
+    .card {
+        width: 240px;
+    }
+    .card-photo-section {
+        height: 241px;
+    }
+    .card-row {
+        justify-content: space-between;
+        margin-top: 30px;
+    }
 }
 
 /* Desktop */
 @media(min-width: 1200px) {
     .container {
-        max-width: 1140px;
+        max-width: 1170px;
     }
     .points-section {
         width: 450px;
@@ -372,5 +427,15 @@ h3 {
     }
     .second-col {
         padding-left: 20px;
+    }
+
+    .card {
+        width: 290px;
+    }
+    .card-photo-section {
+        height: 300px;
+    }
+    .card-row {
+        flex-wrap: nowrap;
     }
 }
