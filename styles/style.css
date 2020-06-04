@@ -107,7 +107,7 @@ body {
 }
 
 .slider {
-    border-bottom: 1px dashed black;
+    text-align: center;
 }
 .page-content {
     padding: 20px 0 20px 0;
@@ -137,6 +137,7 @@ h3 {
 }
 .light {
     background-color: white;
+    color: #292f36;
 }
 .light h3 {
     color: #292f36;
@@ -154,6 +155,7 @@ h3 {
 }
 .dark {
     background-color: #3a454d;
+    color: white;
 }
 .dark h3 {
     color: white;
